@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ur"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>ملٹی کلاؤڈ IoT اور بگ ڈیٹا پروف آف کنسیپٹ | عابد نسیم</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ملٹی کلاؤڈ IoT اور بگ ڈیٹا پروف آف کنسیپٹ" />
+<meta name="author" content="عابد نسیم" />
+<meta property="og:locale" content="ur" />
+<meta name="description" content="Azure، AWS، GCP اور IBM Bluemix پلیٹ فارمز پر IoT، بگ ڈیٹا اور مشین لرننگ کے پروف آف کنسیپٹس کی تعمیر — Raspberry Pi ایج ڈیوائسز سے لے کر کلاؤڈ ڈیٹا لیکس تک۔" />
+<meta name="twitter:description" property="og:description" content="Azure، AWS، GCP اور IBM Bluemix پلیٹ فارمز پر IoT، بگ ڈیٹا اور مشین لرننگ کے پروف آف کنسیپٹس کی تعمیر — Raspberry Pi ایج ڈیوائسز سے لے کر کلاؤڈ ڈیٹا لیکس تک۔" />
+<link rel="canonical" href="https://nasim.pk/work/multicloud-iot-poc/" />
+<meta property="og:url" content="https://nasim.pk/work/multicloud-iot-poc/" />
+<meta property="og:site_name" content="عابد نسیم" />
+<meta property="og:image" content="https://nasim.pk/assets/content/work/multicloud-iot.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-18T14:00:00+05:00" />
+<meta property="article:modified_time" content="2026-04-18T14:00:00+05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://nasim.pk/assets/content/work/multicloud-iot.svg" />
+<meta name="twitter:title" content="ملٹی کلاؤڈ IoT اور بگ ڈیٹا پروف آف کنسیپٹ" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"عابد نسیم"},"dateModified":"2026-04-18T14:00:00+05:00","datePublished":"2026-04-18T14:00:00+05:00","description":"Azure، AWS، GCP اور IBM Bluemix پلیٹ فارمز پر IoT، بگ ڈیٹا اور مشین لرننگ کے پروف آف کنسیپٹس کی تعمیر — Raspberry Pi ایج ڈیوائسز سے لے کر کلاؤڈ ڈیٹا لیکس تک۔","headline":"ملٹی کلاؤڈ IoT اور بگ ڈیٹا پروف آف کنسیپٹ","image":"https://nasim.pk/assets/content/work/multicloud-iot.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://nasim.pk/work/multicloud-iot-poc/"},"url":"https://nasim.pk/work/multicloud-iot-poc/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://nasim.pk/feed.xml" title="عابد نسیم" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">
+      عابد نسیم
+    </a><nav class="site-nav">
+
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-.665,1.484-1.484,1.484H1.484C.665,2.969,0,2.304,0,1.484l0,0C0,.665.665,0,1.484,0h15.032C17.335,0,18,.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C.665,9,0,8.335,0,7.516,0,6.696.665,6.031,1.484,6.031h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484C.665,15,0,14.335,0,13.516,0,12.695.665,12.031,1.484,12.031h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/work/">
+                میرا کام
+              </a><a class="page-link" href="/blog/">
+                بلاگ
+              </a><a class="page-link" href="/hobby/">
+                مشاغل
+              </a><a class="page-link" href="/about/">
+                تعارف
+              </a><a class="page-link" href="/contact/">
+                رابطہ
+              </a></div>
+
+      </nav><button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle dark mode"
+  title="Toggle dark mode">
+  <span class="theme-toggle-icon">☾</span>
+</button>
+
+<script>
+(function () {
+  const button = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+  const icon = button.querySelector(".theme-toggle-icon");
+
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    icon.textContent = theme === "dark" ? "☀" : "☾";
+
+    button.setAttribute(
+      "aria-label",
+      theme === "dark"
+        ? "Switch to light mode"
+        : "Switch to dark mode"
+    );
+  }
+
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark" || savedTheme === "light") {
+    applyTheme(savedTheme);
+  } else {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    applyTheme(prefersDark ? "dark" : "light");
+  }
+
+  button.addEventListener("click", function () {
+    const current =
+      root.getAttribute("data-theme") === "dark"
+        ? "dark"
+        : "light";
+
+    const next = current === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", next);
+    applyTheme(next);
+  });
+})();
+</script>
+
+
+  </div>
+
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ملٹی کلاؤڈ IoT اور بگ ڈیٹا پروف آف کنسیپٹ</h1><p class="post-lead p-summary">Azure، AWS، GCP اور IBM Bluemix پلیٹ فارمز پر IoT، بگ ڈیٹا اور مشین لرننگ کے پروف آف کنسیپٹس کی تعمیر — Raspberry Pi ایج ڈیوائسز سے لے کر کلاؤڈ ڈیٹا لیکس تک۔</p><p class="post-meta">
+      <time class="dt-published" datetime="2026-04-18T14:00:00+05:00" itemprop="datePublished">2026-04-18 14:00</time><span class="post-section"> • <a href="/work/">کام</a></span></p><ul class="tags"><li>#کلاؤڈ</li><li>#IoT</li><li>#بگ ڈیٹا</li><li>#مشین لرننگ</li><li>#Azure</li></ul></header><img class="post-cover" src="/assets/content/work/multicloud-iot.svg" alt="ملٹی کلاؤڈ IoT کا آرکیٹیکچر"><div class="post-content e-content" itemprop="articleBody">
+    <h2 id="پس-منظر">پس منظر</h2>
+
+<p>2017 کے آغاز میں مجھے IoT، بگ ڈیٹا اور مشین لرننگ ورک لوڈز کے لیے کلاؤڈ پلیٹ فارمز کا جائزہ لینے کی خاطر پروف آف کنسیپٹس (POCs) کا ایک جامع مجموعہ بنانے کا کام سونپا گیا۔ مقصد یہ تھا کہ Azure، AWS، GCP، IBM Bluemix (اب IBM Cloud) اور Alibaba Cloud کا یکساں استعمال کے مواقع پر موازنہ کیا جائے — اور پھر کلاؤڈ اپنانے کا ایک اسٹریٹجک روڈ میپ تجویز کیا جائے۔</p>
+
+<p>یہ POCs ایج کمپیوٹنگ (LTE کے ساتھ Raspberry Pi)، میسج بروکرز (Facebook، Azure اور Adafruit IO پر MQTT)، ڈیٹا لیکس اور مشین لرننگ پائپ لائنز تک پھیلے ہوئے تھے۔</p>
+
+<h2 id="ہدف">ہدف</h2>
+
+<blockquote>
+  <p>حقیقی ہارڈ ویئر اور حقیقی ڈیٹا کے ساتھ IoT انجیشن، بگ ڈیٹا پروسیسنگ اور مشین لرننگ کے لیے پانچ کلاؤڈ پلیٹ فارمز کا جائزہ لینا اور ان کا موازنہ کرنا۔</p>
+</blockquote>
+
+<p>کامیابی کے معیارات:</p>
+
+<ul>
+  <li>SigFox اور LoRaWAN کے ذریعے حقیقی Raspberry Pi آلات سے ٹیلی میٹری وصول کرنا</li>
+  <li>Hadoop (HDFS، Yarn، MapReduce) کے ساتھ اسٹریمنگ ڈیٹا پروسیس کرنا</li>
+  <li>Azure Data Factory اور AWS Glue کے ساتھ ڈیٹا لیک پائپ لائنز بنانا</li>
+  <li>ہر پلیٹ فارم پر ML ماڈلز کی تربیت اور تعیناتی</li>
+  <li>قابلِ تکرار ماحول کے لیے IaaS لیب مینجمنٹ کو خودکار بنانا</li>
+</ul>
+
+<h2 id="طریقۂ-کار">طریقۂ کار</h2>
+
+<p>میں نے تمام پلیٹ فارمز پر یکساں ورک لوڈز چلائے:</p>
+
+<ol>
+  <li>
+    <p><strong>ایج لیئر</strong><br />
+Raspberry Pi آلات پر Raspbian فلیش کیا، LTE موڈیمز جوڑے، اور SigFox اور LoRaWAN گیٹ ویز کنفیگر کیے۔ ہر Pi پلیٹ فارم کے مخصوص بروکرز — Azure IoT Hub، AWS IoT Core، IBM Watson IoT اور Adafruit IO — کو MQTT پیغامات بھیجتا تھا۔</p>
+  </li>
+  <li>
+    <p><strong>اسٹریم انجیشن</strong><br />
+MQTT ٹیلی میٹری کو ہر پلیٹ فارم کے اسٹریمنگ انجن کی طرف روٹ کیا گیا: Azure Stream Analytics، AWS Kinesis، Google Cloud Dataflow اور IBM Streaming Analytics۔ یکساں پے لوڈ سائز کے تحت لیٹنسی اور تھروپُٹ ناپے گئے۔</p>
+  </li>
+  <li>
+    <p><strong>ڈیٹا لیک اور بگ ڈیٹا</strong><br />
+خام ٹیلی میٹری کو ہر پلیٹ فارم کے ڈیٹا لیک (Azure Data Lake Store، AWS S3، Google Cloud Storage) میں محفوظ کیا۔ ایگریگیشن کے لیے Hadoop MapReduce جابز چلائیں اور نتائج ہر پلیٹ فارم کی ML سروس کو فراہم کیے۔</p>
+  </li>
+  <li>
+    <p><strong>مشین لرننگ</strong><br />
+Azure ML، AWS SageMaker، Google AI Platform اور IBM Watson Studio پر یکساں ریگریشن ماڈلز (سینسر ڈرفٹ کی پیش گوئی کے لیے) کی تربیت کی۔ تربیت کے وقت، تعیناتی کی لیٹنسی اور لاگت کا موازنہ کیا۔</p>
+  </li>
+  <li>
+    <p><strong>IaaS آٹومیشن</strong><br />
+ہر پلیٹ فارم کے CLI/SDK کے ذریعے VM کی پروویژننگ اور خاتمے کو اسکرپٹ کیا، جس سے ہر ٹیسٹ سائیکل کے لیے قابلِ تکرار لیب ماحول ممکن ہوا۔</p>
+  </li>
+</ol>
+
+<h2 id="چیلنجز">چیلنجز</h2>
+
+<ul>
+  <li>مختلف پلیٹ فارمز کے MQTT بروکر نفاذات میں QoS (کوالٹی آف سروس) کی سطحوں اور retained-message کے رویّے میں باریک فرق تھے۔</li>
+  <li>LoRaWAN گیٹ وے کی کنفیگریشن فراہم کنندگان کے درمیان نمایاں طور پر مختلف تھی — Raspberry Pi کنسنٹریٹر بورڈز پر حسبِ ضرورت فرم ویئر ایڈجسٹمنٹ درکار تھی۔</li>
+  <li>Hadoop جابز کی ٹیوننگ ہر پلیٹ فارم کے لیے الگ تھی؛ جو Yarn کنفیگریشنز Azure HDInsight پر چلتی تھیں وہ Amazon EMR پر بغیر ترمیم کے ناکام ہو جاتی تھیں۔</li>
+  <li>پانچ کلاؤڈز پر لاگت کی نگرانی خود ایک پراجیکٹ تھی — ہر پلیٹ فارم کے بلنگ ماڈل کے لیے الگ مانیٹرنگ ڈیش بورڈز درکار تھے۔</li>
+</ul>
+
+<h2 id="نتیجہ">نتیجہ</h2>
+
+<p>اس جائزے سے 120 صفحات پر مشتمل سفارشاتی رپورٹ تیار ہوئی جسے CTO کے دفتر نے اپنایا۔ بنیادی کلاؤڈ کے طور پر Azure منتخب ہوا، اور DR (ڈیزاسٹر ریکوری) کے متبادل کے طور پر AWS۔ خودکار لیب ماحول مستقبل کے POCs کے لیے کمپنی کا معیار بن گیا، جس نے نئے پراجیکٹ کے آغاز کا وقت ہفتوں سے گھٹا کر گھنٹوں تک کر دیا۔</p>
+
+<h2 id="اہم-سبق">اہم سبق</h2>
+
+<p><strong>ملٹی کلاؤڈ کا مقصد لاک اِن سے بچنا نہیں — بلکہ ہر کام کے لیے درست ٹول چننا ہے۔</strong> IoT انجیشن میں Azure کو ترجیح ملی، بگ ڈیٹا میں اُس وقت AWS کو، اور ML کی تربیت GCP پر سب سے زیادہ کفایتی رہی۔ سفارش عملی تھی، نظریاتی نہیں۔</p>
+
+  </div>
+
+  <a class="u-url" href="/work/multicloud-iot-poc/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">عابد نسیم</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">{&quot;name&quot;=&gt;&quot;عابد نسیم&quot;}</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>عابد نسیم کی ذاتی ویب سائٹ (پاکستان)</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
